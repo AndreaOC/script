@@ -1,0 +1,19 @@
+{
+  "name": "script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node simulacion.js",
+    "rdm": "node random.js",
+    "run": "node simulacion_exe.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "1.0.2",
+    "random": "4.1.0",
+    "robotjs": "0.6.0"
+  }
+}
