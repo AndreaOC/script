@@ -25,6 +25,22 @@ function simularActividad() {
         }
     });
 
+    // Generar una tecla aleatoria
+    const keyCode = getRandomInt(65, 90); // Códigos ASCII para las letras mayúsculas
+    const keyChar = String.fromCharCode(keyCode);
+
+    // Ejecutar el comando de Python para simular la pulsación de tecla
+    exec(`python -c "import pyautogui; pyautogui.press('${keyChar}')"`, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`Error: ${stderr}`);
+            return;
+        }
+    });
+
     // Esperar un tiempo antes de terminar
     setTimeout(() => {
         console.log("Fin");
